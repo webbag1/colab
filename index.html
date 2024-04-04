@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="full">
+        <div class="conatiner border">
+            <div class="clock border" id="clock">00:00:00</div>
+            <div class="theme border" id="theme">
+                <div class="th"></div>
+                <div class="th"></div>
+                <div class="th"></div>
+                <button>Mode</button>
+            </div>
+            <div class="timer border" id="timer">
+                <div class="fullinp border">
+                    <div class="inputcont" id="inputcont">
+                        <div class="add" id="addh">+</div>
+                        <input type="number" id="timerhr" class="tc timerhr border">
+                        <div class="sub" id="subh">-</div>
+                    </div>
+                    <div class="inputcont" id="inputcont">
+                        <div class="add" id="addm">+</div>
+                        <input type="number" id="timermin" class="tc timermin border">
+                        <div class="sub" id="subm">-</div>
+                    </div>
+                    <div class="inputcont" id="inputcont">
+                        <div class="add" id="adds">+</div>
+                        <input type="number" id="timersec" class="tc timersec border">
+                        <div class="sub" id="subs">-</div>
+                    </div>
+                </div>
+                <div class="timerdispaly fullinp border" id="timerdispaly">
+                    <div class="tdhr" id="tdhr">00</div>:
+                    <div class="tdmin" id="tdmin">00</div>:
+                    <div class="tdsec" id="tdsec">00</div>
+                </div>
+                <button onclick="start()" id="st" >Start</button>
+                <button onclick="pause()" id="pu" disabled>Pause</button>
+                <button onclick="resume()" id="rsm" disabled>Resume</button>
+                <button onclick="reset()" id="rt" disabled>Reset</button>
+            </div>
+
+            <!-- ------countdown------ -->
+            
+            <div class="cuntdown border">
+                <div class="countdispaly fullinp border" id="countdispaly">
+                    <div class="cdhr" id="cdhr">00</div>:
+                    <div class="cdmin" id="cdmin">00</div>:
+                    <div class="cdsec" id="cdsec">00</div>
+                </div>
+            <button onclick="startcount()" id="stc" >Start</button>
+            <button onclick="pausecount()" id="puc" disabled>Pause</button>
+            <button onclick="resumecount()" id="rsmc" disabled>Resume</button>
+            <button onclick="resetcount()" id="rtc" disabled>Reset</button>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+    <script src="time.js"></script>
+    <script src="theme.js"></script>
+    <script src="countdown.js"></script>
+</body>
+
+</html>
