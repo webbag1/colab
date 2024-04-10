@@ -77,6 +77,7 @@ const months = [
     fetch('http://localhost:3300/getrecords')
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         const names = data.map(entry => entry.name);
         generateCalendar(currentMonth, currentYear, names, data);
       })
@@ -84,6 +85,7 @@ const months = [
   });
   
   function prevMonth() {
+    console.log("Previous month button clicked");
     currentMonth -= 1;
     if (currentMonth < 0) {
       currentMonth = 11;
@@ -100,6 +102,7 @@ const months = [
     }
     generateCalendar(currentMonth, currentYear);
   }
+  
   
   generateCalendar(currentMonth, currentYear);
   

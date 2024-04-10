@@ -46,8 +46,4 @@ const server = app.listen(3300, () => {
   console.log('Server is running on port 3300 http://localhost:3300/getrecords');
 });
 
-// // Gracefully handle server shutdown
-// process.on('SIGINT', () => {
-//   console.log('Shutting down server');
-//   server.close();
-// });
+
